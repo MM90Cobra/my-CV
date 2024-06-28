@@ -37,8 +37,41 @@ body {
   background-color: rgb(194, 222, 139);
 }
 
+.nav-link {
+  padding: 4px 8px;
+  color: black;
+}
+
+.nav-link:hover {
+  color: black;
+  background-color: lightgray;
+}
+
+.nav-link:active {
+  color: white;
+  background-color: grey;
+}
+
+.nav-link + .nav-link {
+  margin-left: 16px;
+}
+
 .main {
   max-width: 800px;
   margin: 0 auto;
   padding: 16px;
+  border-left: 4px dotted grey;
+  border-right: 4px dashed grey;
+}
+
+.main > * + * {
+  margin-top: 48px;
+}
+
+.main > * {
+  border-top: 4px solid grey;
+}
+
+.main > *:first-child {
+  border-top: 8px none;
 }
