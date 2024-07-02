@@ -71,3 +71,11 @@ body {
 .main > *:first-child {
   border-top: 8px none;
 }
+
+.experience-heading {
+  display: inline-block;
+}
+
+.experience-subheading {
+  display: inline-block;
+}
