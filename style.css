@@ -1,17 +1,13 @@
 /**************************************************************/
 /* General Stylings */
 
-/*
 *,
-*:before,
-*:after 
-*/
-
-* {
-  box-sizing: border-box;
+*:before,       /* damit auch alle pseudoklassen auf border-box umgestellt werden */
+*:after {
+  box-sizing: border-box; /*Wichtig, damit die Boxgroesse gleich bleibt*/
 }
 
-* {
+html {
   font-family: "Roboto", sans-serif;
 }
 
