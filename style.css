@@ -34,7 +34,19 @@ h6 {
 }
 
 body {
+  --background-color: snow;
+  --text-color: black;
+  --accent-color: gold;
+  --accent-text-color: grey;
+  --nav-link-active-bg-color: lightgrey;
+
   margin: 0;
+  background-color: var(--background-color);
+  color: var(--text-color);
+}
+
+*::selection {
+  background-color: var(--accent-color);
 }
 
 a,
@@ -42,7 +54,7 @@ a:link,
 a:hover,
 a:visited,
 a:active {
-  color: black;
+  color: var(--text-color);
 }
 
 /**************************************************************/
@@ -55,8 +67,13 @@ a:active {
   padding-top: 4.5rem;
   text-align: center;
   /*background-color: lightyellow;*/
-  background-image: linear-gradient(235deg, snow, dodgerblue);
+  background-image: linear-gradient(
+    235deg,
+    var(--background-color),
+    var(--accent-color)
+  );
   position: relative;
+  color: var(--accent-text-color);
 }
 
 .heading-group {
@@ -81,8 +98,8 @@ a:active {
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: dodgerblue;
-  color: black;
+  background: var(--accent-color);
+  color: var(--text-color);
 }
 
 @media screen and (min-width: 992px) {
@@ -116,17 +133,23 @@ a:active {
 
 .nav-link {
   padding: 0.25rem 0.5rem;
-  color: black;
+  color: var(--accent-text-color);
 }
 
 .nav-link:hover {
   /*color: black;*/
-  background-color: lightblue;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
 }
 
 .nav-link:active {
   /*color: white;*/
-  background-color: lightgreen;
+  background-color: var(--nav-link-active-bg-color);
+  color: var(--accent-text-color);
+}
+
+.nav-link:visited {
+  color: var(--accent-text-color);
 }
 
 @media screen and (min-width: 768px) {
@@ -155,7 +178,7 @@ a:active {
 }
 
 .main > * {
-  border-top: 0.25rem solid lightblue;
+  border-top: 0.25rem solid var(--accent-color);
   padding: 0 1rem;
 }
 
@@ -184,7 +207,8 @@ a:active {
 
 .footer {
   margin-top: 3rem;
-  background-color: lightblue;
+  background-color: var(--accent-color);
+  color: var(--accent-text-color);
   padding: 2rem;
 }
 
@@ -193,6 +217,10 @@ a:active {
   margin: 0;
 }
 
-.footer-link {
-  color: black;
+.footer-link,
+.footer-link:link,
+.footer-link:hover,
+.footer-link:active,
+.footer-link:visited {
+  color: var(--accent-text-color);
 }
