@@ -37,6 +37,14 @@ body {
   margin: 0;
 }
 
+a,
+a:link,
+a:hover,
+a:visited,
+a:active {
+  color: black;
+}
+
 /**************************************************************/
 /* Specific Stylings */
 
@@ -46,7 +54,8 @@ body {
   padding: 3rem 1rem;
   padding-top: 4.5rem;
   text-align: center;
-  background-color: lightyellow;
+  /*background-color: lightyellow;*/
+  background-image: linear-gradient(235deg, snow, dodgerblue);
   position: relative;
 }
 
@@ -72,7 +81,7 @@ body {
   top: 1rem;
   padding: 0.5rem;
   border-radius: 0.25rem;
-  background: gold;
+  background: dodgerblue;
   color: black;
 }
 
@@ -111,13 +120,13 @@ body {
 }
 
 .nav-link:hover {
-  color: black;
-  background-color: lightgray;
+  /*color: black;*/
+  background-color: lightblue;
 }
 
 .nav-link:active {
-  color: white;
-  background-color: grey;
+  /*color: white;*/
+  background-color: lightgreen;
 }
 
 @media screen and (min-width: 768px) {
@@ -146,7 +155,7 @@ body {
 }
 
 .main > * {
-  border-top: 0.25rem solid grey;
+  border-top: 0.25rem solid lightblue;
   padding: 0 1rem;
 }
 
@@ -171,4 +180,19 @@ body {
     align-items: baseline;
     justify-content: space-between;
   }
+}
+
+.footer {
+  margin-top: 3rem;
+  background-color: lightblue;
+  padding: 2rem;
+}
+
+.footer-text {
+  text-align: center;
+  margin: 0;
+}
+
+.footer-link {
+  color: black;
 }
